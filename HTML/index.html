@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/estiloS.css">
     <title>Recetas</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const sugerenciaForm = document.getElementById("sugerencia-form");
+    
+    sugerenciaForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar que se envíe el formulario por defecto
+        
+        const sugerenciaTextarea = document.getElementById("sugerencia");
+        const sugerencia = sugerenciaTextarea.value;
+        
+        // En lugar de mostrar una alerta, puedes enviar la sugerencia a través de AJAX a tu servidor
+        alert("¡Gracias por tu sugerencia!\n\nSugerencia: " + sugerencia);
+        
+        sugerenciaTextarea.value = ""; // Limpiar el campo de sugerencia
+    });
+});
+
+    </script>
 </head>
 <body>
     <header>
@@ -40,5 +58,16 @@
             </ol>
         </div>
     </div>
+    <div class="sugerencias">
+    <h2>¿Qué recetas te gustaría ver en el futuro?</h2>
+    <p>¡Déjanos tus sugerencias y nos encargaremos de traerte las mejores recetas!</p>
+    <form action="#" method="post" id="sugerencia-form">
+        <label for="sugerencia">Escribe tu sugerencia:</label>
+        <textarea id="sugerencia" name="sugerencia" rows="4" cols="50" required></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
 </body>
 </html>

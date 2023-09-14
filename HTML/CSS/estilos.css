@@ -60,3 +60,40 @@ header {
     display: table;
     clear: both;
 }
+
+/* Agrega estos estilos a tu archivo estiloS.css o crea un nuevo archivo CSS */
+.sugerencias {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #aaa;
+}
+
+#sugerencia-form {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
